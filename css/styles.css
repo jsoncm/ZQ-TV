@@ -16,7 +16,7 @@
 }
 
 .page-bg {
-    background: linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end));
+    background: linear-gradient(135deg, #181c2b 0%, #232946 100%);
     min-height: 100vh;
     /* 柔和赛博点状背景 */
     background-image: 
@@ -26,6 +26,8 @@
         radial-gradient(circle at 50px 50px, rgba(150, 255, 250, 0.015) 1px, transparent 2px);
     background-blend-mode: normal;
     background-size: cover, 100px 100px, 50px 50px, 75px 75px;
+    color: #e0e6f6;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
 }
 
 button, .card-hover {
@@ -88,9 +90,10 @@ button, .card-hover {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, #00eaff 0%, #7f5fff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 16px #00eaff44, 0 1px 2px #7f5fff33;
 }
 
 /* 改进设置面板样式 */
@@ -892,4 +895,90 @@ body {
 #toast.hidden {
     opacity: 0;
     transform: translateX(-50%) translateY(-100%);
+}
+
+/* 炫彩科技风格美化 */
+h1, h2, h3 {
+    background: linear-gradient(90deg, #00eaff 0%, #7f5fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 16px #00eaff44, 0 1px 2px #7f5fff33;
+}
+
+.card-hover, .card, .modal, .settings-panel, .history-item, .episode-btn, .search-card-img-container {
+    background: rgba(24,28,43,0.95);
+    border-radius: 1rem;
+    box-shadow: 0 4px 32px 0 #00eaff22, 0 1.5px 8px 0 #7f5fff22;
+    border: 1.5px solid transparent;
+    transition: box-shadow 0.3s, border 0.3s, transform 0.2s;
+}
+.card-hover:hover, .episode-btn:hover {
+    border-image: linear-gradient(90deg, #00eaff 0%, #7f5fff 100%) 1;
+    box-shadow: 0 0 24px 4px #00eaff88, 0 2px 12px 0 #7f5fff55;
+    transform: translateY(-2px) scale(1.03);
+}
+
+button, .btn, .form-checkbox:checked {
+    background: linear-gradient(90deg, #00eaff 0%, #7f5fff 100%);
+    color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 12px #00eaff44;
+    border: none;
+    transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+}
+button:hover, .btn:hover {
+    background: linear-gradient(90deg, #7f5fff 0%, #00eaff 100%);
+    box-shadow: 0 0 16px #7f5fff88, 0 2px 8px #00eaff55;
+    transform: scale(1.05);
+}
+
+input, select, textarea {
+    background: rgba(24,28,43,0.85);
+    border: 1.5px solid #00eaff88;
+    color: #e0e6f6;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 8px #00eaff22;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #7f5fff;
+    box-shadow: 0 0 8px #7f5fff88;
+}
+
+.divider, hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #00eaff 0%, #7f5fff 100%);
+    box-shadow: 0 1px 8px #00eaff44;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #232946;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00eaff 0%, #7f5fff 100%);
+    border-radius: 8px;
+}
+
+/* 炫彩流光动画 */
+@keyframes neon-glow {
+    0% { box-shadow: 0 0 8px #00eaff88, 0 0 16px #7f5fff44; }
+    50% { box-shadow: 0 0 24px #7f5fffcc, 0 0 32px #00eaff88; }
+    100% { box-shadow: 0 0 8px #00eaff88, 0 0 16px #7f5fff44; }
+}
+.card-hover:hover, .episode-btn:hover, button:hover, .btn:hover {
+    animation: neon-glow 1.2s infinite alternate;
+}
+
+/* 响应式优化 */
+@media (max-width: 600px) {
+    .card, .card-hover, .modal, .settings-panel, .history-item {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
 }
