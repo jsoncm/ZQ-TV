@@ -181,28 +181,25 @@
     <!-- 添加 Umami 分析脚本 -->
     <script defer src="https://umami.bayuedeqi.dpdns.org/script.js" data-website-id="03a82ec7-bf5b-46e6-ac42-1b980b3bd470"></script>
 </head>
-<body class="page-bg text-white">
-    <header class="text-center mt-8 mb-6">
-        <h1 class="text-4xl font-bold gradient-text mb-2 animate-pulse">ZQ-TV 播放器</h1>
-        <hr class="divider my-4 mx-auto w-1/2">
+<body>
+    <header class="bg-[#111] p-4 flex items-center border-b border-[#333] gap-2 player-header">
+        <div class="flex items-center min-w-0">
+            <a href="/" class="flex items-center min-w-0">
+                <svg class="w-8 h-8 mr-2 text-[#00ccff] logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <h1 class="text-xl font-bold gradient-text logo-text">ZQ-TV</h1>
+            </a>
+        </div>
+        <h2 id="videoTitle" class="text-xl font-semibold flex-1 text-center overflow-x-auto whitespace-nowrap truncate custom-title-scroll"></h2>
+        <a href="/" class="px-4 py-2 bg-[#222] hover:bg-[#333] border border-[#333] rounded-lg transition-colors flex items-center min-w-0 home-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21V9.5l-7-5-7 5V21a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2z" />
+              <path d="M9 22V12h6v10" />
+            </svg>
+            <span class="home-btn-text">返回首页</span>
+        </a>
     </header>
-    <main class="player-container card-hover p-6 shadow-2xl">
-        <div id="player" class="rounded-2xl border-2 border-[#00eaff88] shadow-lg"></div>
-        <div id="videoTitle" class="text-2xl font-semibold gradient-text mt-4 mb-2"></div>
-        <div class="flex items-center space-x-4 mb-4">
-            <button id="autoplayToggle" class="btn px-4 py-2">自动连播</button>
-            <button id="adFilterToggle" class="btn px-4 py-2">广告过滤</button>
-        </div>
-        <div id="episodesList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2 mb-4"></div>
-        <div id="progressBar" class="w-full h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mb-4"></div>
-        <div id="errorMsg" class="hidden text-red-400 text-lg mt-4"></div>
-    </main>
-    <div id="loading" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-        <div class="bg-[#111] p-8 rounded-lg border border-[#333] flex items-center space-x-4 card-hover">
-            <div class="w-8 h-8 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
-            <p class="text-white text-lg">加载中...</p>
-        </div>
-    </div>
 
     <!-- 密码验证弹窗 -->
     <div id="passwordModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[65] transition-opacity duration-300">
