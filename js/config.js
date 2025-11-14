@@ -112,12 +112,12 @@ const API_SITES = {
         searchPath: '/xinlangapi.php/provide/vod/from/xlm3u8/?ac=videolist&wd=',
         detailPath: '/xinlangapi.php/provide/vod/from/xlm3u8/?ac=videolist&ids='
     },
-    hongniu: {
-        api: 'https://www.hongniuzy2.com',
-        name: '红牛资源',
-        searchPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&wd=',
-        detailPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&ids='
-    },
+    // hongniu: {
+    //     api: 'https://www.hongniuzy2.com',
+    //     name: '红牛资源',
+    //     searchPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&wd=',
+    //     detailPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&ids='
+    // },
     // 下面是一些成人内容的API源，默认隐藏，使用本项目浏览黄色内容违背项目初衷
     // ckzy: {
     //     api: 'https://www.ckzy1.com',
