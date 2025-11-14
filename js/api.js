@@ -106,7 +106,7 @@ async function handleApiRequest(url) {
             
             const detailUrl = customApi
                 ? `${customApi}${API_CONFIG.detail.path}${id}`
-                : `${API_SITES[sourceCode].api}${API_CONFIG.detail.path}${id}`;
+                : `${API_SITES[sourceCode].api}${(API_SITES[sourceCode].detailPath || API_CONFIG.detail.path)}${id}`;
             
             // 添加超时处理
             const controller = new AbortController();

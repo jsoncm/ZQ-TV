@@ -21,33 +21,33 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
-    dyttzy: {
-        api: 'http://caiji.dyttzyapi.com',
-        name: '电影天堂资源',
-        detail: 'http://caiji.dyttzyapi.com',
-    },
+    // dyttzy: {
+    //     api: 'http://caiji.dyttzyapi.com',
+    //     name: '电影天堂资源',
+    //     detail: 'http://caiji.dyttzyapi.com',
+    // },
     ruyi: {
         api: 'https://cj.rycjapi.com',
         name: '如意资源',
     },
-    bfzy: {
-        api: 'https://bfzyapi.com',
-        name: '暴风资源',
-    },
+    // bfzy: {
+    //     api: 'https://bfzyapi.com',
+    //     name: '暴风资源',
+    // },
     tyyszy: {
         api: 'https://tyyszy.com',
         name: '天涯资源',
     },
-    ffzy: {
-        api: 'http://ffzy5.tv',
-        name: '非凡影视',
-        detail: 'http://ffzy5.tv',
-    },
-    heimuer: {
-        api: 'https://json.heimuer.xyz',
-        name: '黑木耳',
-        detail: 'https://heimuer.tv',
-    },
+    // ffzy: {
+    //     api: 'http://ffzy5.tv',
+    //     name: '非凡影视',
+    //     detail: 'http://ffzy5.tv',
+    // },
+    // heimuer: {
+    //     api: 'https://json.heimuer.xyz',
+    //     name: '黑木耳',
+    //     detail: 'https://heimuer.tv',
+    // },
     zy360: {
         api: 'https://360zy.com',
         name: '360资源',
@@ -56,19 +56,19 @@ const API_SITES = {
         api: 'https://wolongzyw.com',
         name: '卧龙资源',
     },
-    hwba: {
-        api: 'https://cjhwba.com',
-        name: '华为吧资源',
-    },
+    // hwba: {
+    //     api: 'https://cjhwba.com',
+    //     name: '华为吧资源',
+    // },
     jisu: {
         api: 'https://jszyapi.com',
         name: '极速资源',
         detail: 'https://jszyapi.com'
     },
-    dbzy: {
-        api: 'https://dbzy.com',
-        name: '豆瓣资源',
-    },
+    // dbzy: {
+    //     api: 'https://dbzy.com',
+    //     name: '豆瓣资源',
+    // },
     huya: {
         api: 'https://www.huyaapi.com',
         name: '虎牙资源',
@@ -82,29 +82,41 @@ const API_SITES = {
         api: 'https://www.mdzyapi.com',
         name: '魔都资源',
     },
-    zuid: {
-        api: 'https://api.zuidapi.com',
-        name: '最大资源'
+    // zuid: {
+    //     api: 'https://api.zuidapi.com',
+    //     name: '最大资源'
+    // },
+    // yinghua: {
+    //     api: 'https://m3u8.apiyhzy.com',
+    //     name: '樱花资源'
+    // },
+    // baidu: {
+    //     api: 'https://api.apibdzy.com',
+    //     name: '百度云资源'
+    // },
+    // wujin: {
+    //     api: 'https://api.wujinapi.me',
+    //     name: '无尽资源'
+    // },
+    // wwzy: {
+    //     api: 'https://wwzy.tv',
+    //     name: '旺旺短剧'
+    // },
+    // ikun: {
+    //     api: 'https://ikunzyapi.com',
+    //     name: 'iKun资源'
+    // },
+    xinlang: {
+        api: 'https://api.xinlangapi.com',
+        name: '新浪资源',
+        searchPath: '/xinlangapi.php/provide/vod/from/xlm3u8/?ac=videolist&wd=',
+        detailPath: '/xinlangapi.php/provide/vod/from/xlm3u8/?ac=videolist&ids='
     },
-    yinghua: {
-        api: 'https://m3u8.apiyhzy.com',
-        name: '樱花资源'
-    },
-    baidu: {
-        api: 'https://api.apibdzy.com',
-        name: '百度云资源'
-    },
-    wujin: {
-        api: 'https://api.wujinapi.me',
-        name: '无尽资源'
-    },
-    wwzy: {
-        api: 'https://wwzy.tv',
-        name: '旺旺短剧'
-    },
-    ikun: {
-        api: 'https://ikunzyapi.com',
-        name: 'iKun资源'
+    hongniu: {
+        api: 'https://www.hongniuzy2.com',
+        name: '红牛资源',
+        searchPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&wd=',
+        detailPath: '/api.php/provide/vod/from/hnm3u8/at/josn/?ac=videolist&ids='
     },
     // 下面是一些成人内容的API源，默认隐藏，使用本项目浏览黄色内容违背项目初衷
     // ckzy: {

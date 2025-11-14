@@ -8,13 +8,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 18080;
 
 // 启用 CORS
 app.use(cors());
 
 // 静态文件路径
-app.use(express.static('./'));
+// app.use(express.static('./'));
+app.use(express.static(path.resolve(__dirname, '.')));
 
 /*
 app.get('/', async (req, res) => {
